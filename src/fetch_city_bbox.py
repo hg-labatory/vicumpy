@@ -6,7 +6,6 @@ import logging
 import json
 
 
-
 def _fetch_nominatim_data(url: str, headers: dict, city_name: str) -> dict | None:
     """Fetch data from Nominatim API and handle response validation.
     
@@ -78,7 +77,6 @@ def _parse_bbox_from_result(data: dict, city_name: str) -> dict | None:
         "max_lon": float(bbox_raw[3]),
     }
 
-
     TODO: "Fill in the code to write the data to src/geodaten/data.json" 
 
     with open("src/geodaten/city_daten.json", "w", encoding="utf-8") as f:
@@ -87,4 +85,5 @@ def _parse_bbox_from_result(data: dict, city_name: str) -> dict | None:
     logging.info("Successfully fetched bbox for %s: %s", city_name, bbox)
     return bbox
 
-city_dic["Stadt"] = get_city_bbox(city_dic.keys())
+city_dic["Aue"] = get_city_bbox("Aue")
+print(city_dic["Aue"])
