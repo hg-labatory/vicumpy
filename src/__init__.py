@@ -1,0 +1,1 @@
+# Vicumpy package initialization

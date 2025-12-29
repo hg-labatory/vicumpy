@@ -1,0 +1,21 @@
+{
+  "place_id": 118914215,
+  "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+  "osm_type": "relation",
+  "osm_id": 62594,
+  "lat": "50.8323531",
+  "lon": "12.9189140",
+  "class": "boundary",
+  "type": "administrative",
+  "place_rank": 12,
+  "importance": 0.6397321405273814,
+  "addresstype": "city",
+  "name": "Chemnitz",
+  "display_name": "Chemnitz, Lichtenau, Sachsen, Deutschland",
+  "boundingbox": [
+    "50.7413804",
+    "50.9039377",
+    "12.7275333",
+    "13.0540394"
+  ]
+}
