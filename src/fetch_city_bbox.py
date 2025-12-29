@@ -5,6 +5,8 @@ from config import city_dic
 import logging
 import json
 
+
+
 def _fetch_nominatim_data(url: str, headers: dict, city_name: str) -> dict | None:
     """Fetch data from Nominatim API and handle response validation.
     
