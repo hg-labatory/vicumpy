@@ -41,12 +41,12 @@ def build_area_query(country_code, admin_level_country, city_name, nameconventio
     for streettype in street_types_list:
 
         query = f"""
-            area["ISO3166-1"={country_code}][admin_level={admin_level_country}]->.country;
-            area["{nameconvention}"="{city_name}"][admin_level={admin_level_city}]->.city;
-            way[highway={streettype}];
-            (._;>;);
-            out body;
-            """
+        area["ISO3166-1"={country_code}][admin_level={admin_level_country}]->.country;
+        area["{nameconvention}"="{city_name}"][admin_level={admin_level_city}]->.city;
+        way[highway={streettype}](area.city)(area.country);
+        (._;>;);
+        out body;
+        """
 
         list_of_queries.append(query)
     return list_of_queries
@@ -57,6 +57,7 @@ def parse_osm_result(result):
 
     for way in result.ways:
         print(way)
+
         # if "highway" in way.tags and way.tags["highway"] == "primary":
         line = LineString([(p.lon, p.lat) for p in way.nodes])
 
@@ -70,25 +71,18 @@ def parse_osm_result(result):
     return gpd.GeoDataFrame(data, crs="EPSG:4326").to_crs("EPSG:31468")
 
 
-def safe_query(api, query):
-
-    try:
-        return api.query(query)
-    except overpy.exception.OverpassTooManyRequests:
-        time.sleep(20)
-
-
 if __name__ == "__main__":
-    api = overpy.Overpass()
+    api = overpy.Overpass(url="https://overpass.kumi.systems/api/interpreter")
 
     list_of_queries = build_area_query(country_code, admin_level_country, city_name, nameconvention)
 
     for query in list_of_queries:
         print(query)
-        result = safe_query(api, query)
-        # if result is None:
-        #     continue
+        result = api.query(query)
+        if result is None:
+            continue
         gdf = parse_osm_result(result)
         list_of_gdf.append(gdf)
         osm_streets_gdf = pd.concat(list_of_gdf, ignore_index=True)
-        gdf.to_file("streetnet.gpkg", driver="GPKG")
+        print(osm_streets_gdf.head())
+        osm_streets_gdf.to_file("streetnet.gpkg", driver="GPKG")
