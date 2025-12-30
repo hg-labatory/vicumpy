@@ -3,5 +3,6 @@
         "celerybeat",
         "cython"
     ],
-    "python.analysis.autoImportCompletions": false
+    "python.analysis.autoImportCompletions": true,
+    "workbench.preferredDarkColorTheme": "Visual Studio Light"
 }
