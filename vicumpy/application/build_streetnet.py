@@ -12,14 +12,15 @@ class BuildStreetNetworkUseCase:
         queries = self.query_builder.build_queries(area_config)
 
         gdfs = []
-        if not gdfs:
-            raise ValueError("No GeoDataFrames created")
 
         for query in queries:
             raw_result = self.overpass_client.fetch(query)
             records = self.parser.parse(raw_result)
             gdf = self.geo_repo.create_gdf(records)
             gdfs.append(gdf)
+
+        if not gdfs:
+            raise ValueError("No GeoDataFrames created")
 
         merged = self.geo_repo.concat(gdfs)
         self.geo_repo.save(merged)

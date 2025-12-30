@@ -1,6 +1,5 @@
 # infrastructure/osm_parser.py
 
-
 from shapely import LineString
 
 
