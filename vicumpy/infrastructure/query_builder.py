@@ -1,6 +1,7 @@
 class QueryBuilder:
 
     def build_queries(self, config):
+        
         queries = []
 
         for streettype in config.street_types:
