@@ -9,3 +9,4 @@ class OverpassClient:
 
     def fetch(self, query: str):
         return self.api.query(query)
+    
