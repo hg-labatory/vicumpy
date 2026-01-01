@@ -1,4 +1,5 @@
 # vicumpy/ai/intern_parser.py
+#!
 
 from vicumpy.application.area_config import AreaConfig
 
