@@ -1,6 +1,5 @@
 #! .venv\Scripts\python.exe
 
-token = "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"
 
 import json
 from openai import OpenAI
