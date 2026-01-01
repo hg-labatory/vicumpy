@@ -11,7 +11,7 @@ class Street:
     geometry: Any  # bewusst generisch!
 
 
-# domain/street.py
+
 class StreetNetwork:
     def __init__(self, streets: list[Street]):
         self.streets = streets
