@@ -2,7 +2,6 @@ from application.build_streetnet import BuildStreetNetworkUseCase
 import sys
 
 from ai.intern_parser import FakeAIIntentParser
-
 from infrastructure.osm_parser import ResultParser
 from infrastructure.overpass_client import OverpassClient
 from infrastructure.query_builder import QueryBuilder
