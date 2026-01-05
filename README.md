@@ -21,7 +21,7 @@ python -m vicumpy.cli.main "Give me the bikenet from Berlin"
 
 Das folgende Beispielbild zeigt ein generiertes Straßennetz, wie es nach dem Export in einem GIS‑Tool dargestellt werden kann:
 
-![Example output](example_pic.png)
+![Example output]( assets\example_pic.png)
 
 ## Design Decisions
 ## Future Work
