@@ -15,7 +15,7 @@ All external concerns are isolated, allowing the core application flow to remain
 
 Das folgende Beispielbild zeigt ein generiertes Straßennetz, wie es nach dem Export in einem GIS‑Tool dargestellt werden kann:
 
-example_pic.png
+![Example output](example_pic.png)
 
 ## Design Decisions
 ## Future Work
