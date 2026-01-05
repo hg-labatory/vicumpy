@@ -1,13 +1,18 @@
 #! .venv\Scripts\python.exe
-
-
 import json
 from openai import OpenAI
 from vicumpy.application.area_config import AreaConfig
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+api_key = os.environ.get("OPENAI_API_KEY")
 
 
 class OpenAIIntentParser:
-    def __init__(self, api_key=token):
+
+    def __init__(self, api_key=api_key):
         self.client = OpenAI(api_key=api_key)
 
     def parse(self, text: str) -> AreaConfig:
