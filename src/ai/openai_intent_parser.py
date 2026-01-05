@@ -1,7 +1,7 @@
 #! .venv\Scripts\python.exe
 import json
 from openai import OpenAI
-from vicumpy.application.area_config import AreaConfig
+from application.area_config import AreaConfig
 from dotenv import load_dotenv
 import os
 

@@ -1,6 +1,6 @@
 # vicumpy/ai/intern_parser.py
 
-from vicumpy.application.area_config import AreaConfig
+from application.area_config import AreaConfig
 
 
 class FakeAIIntentParser:

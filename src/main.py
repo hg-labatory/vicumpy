@@ -1,14 +1,12 @@
+from application.build_streetnet import BuildStreetNetworkUseCase
 import sys
-from vicumpy.application.area_config import AreaConfig
-from vicumpy.application.build_streetnet import BuildStreetNetworkUseCase
 
-from vicumpy.ai.intern_parser import FakeAIIntentParser
+from ai.intern_parser import FakeAIIntentParser
 
-from vicumpy.infrastructure.osm_parser import ResultParser
-from vicumpy.infrastructure.overpass_client import OverpassClient
-from vicumpy.infrastructure.query_builder import QueryBuilder
-from vicumpy.infrastructure.geopackage_repository import GeopackageRepository
-from vicumpy.application.area_config import AreaConfig
+from infrastructure.osm_parser import ResultParser
+from infrastructure.overpass_client import OverpassClient
+from infrastructure.query_builder import QueryBuilder
+from infrastructure.geopackage_repository import GeopackageRepository
 
 
 def main():
