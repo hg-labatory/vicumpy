@@ -13,6 +13,12 @@ All external concerns are isolated, allowing the core application flow to remain
 
 ## Example Usage
 
+Mit vicumpy können Benutzer die benötigten Straßendaten in **natürlicher Sprache** beschreiben, zum Beispiel:
+
+```bash
+python -m vicumpy.cli.main "Give me the bikenet from Berlin"
+```
+
 Das folgende Beispielbild zeigt ein generiertes Straßennetz, wie es nach dem Export in einem GIS‑Tool dargestellt werden kann:
 
 ![Example output](example_pic.png)
