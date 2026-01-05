@@ -1,11 +1,10 @@
-from application.build_streetnet import BuildStreetNetworkUseCase
 import sys
-
-from ai.intern_parser import FakeAIIntentParser
-from infrastructure.osm_parser import ResultParser
-from infrastructure.overpass_client import OverpassClient
-from infrastructure.query_builder import QueryBuilder
-from infrastructure.geopackage_repository import GeopackageRepository
+from src.application.build_streetnet import BuildStreetNetworkUseCase
+from src.ai.intern_parser import FakeAIIntentParser
+from src.infrastructure.osm_parser import ResultParser
+from src.infrastructure.overpass_client import OverpassClient
+from src.infrastructure.query_builder import QueryBuilder
+from src.infrastructure.geopackage_repository import GeopackageRepository
 
 
 def main():

@@ -49,5 +49,3 @@ class OpenAIIntentParser:
             nameconvention="name",
         )
 
-
-ai = OpenAIIntentParser().parse("I want to download all residential and primary roads in Berlin, Germany.")
