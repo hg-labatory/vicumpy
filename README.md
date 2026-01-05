@@ -12,6 +12,11 @@ The architecture follows a simple dependency direction: CLI → AI Intent Parser
 All external concerns are isolated, allowing the core application flow to remain stable while new features (e.g. AI-based input) are added.
 
 ## Example Usage
+
+Das folgende Beispielbild zeigt ein generiertes Straßennetz, wie es nach dem Export in einem GIS‑Tool dargestellt werden kann:
+
+example_pic.png
+
 ## Design Decisions
 ## Future Work
 

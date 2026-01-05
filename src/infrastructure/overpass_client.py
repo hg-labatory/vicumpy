@@ -8,5 +8,5 @@ class OverpassClient:
         self.api = overpy.Overpass(url =url)
 
     def fetch(self, query: str):
+        print(query)
         return self.api.query(query)
-    
